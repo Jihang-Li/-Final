@@ -131,7 +131,7 @@ class MPL(nn.Module):
         r = torch.log(loss) - torch.log(pred.clamp(min=1e-10))  # Avoid log(0)
         return torch_huber(0.001, r).sum()
 
-from MultiPowerLaw.src.config import  FIT_MAX_STEPS,FIT_EVAL_INTERVAL, FIT_LR1, FIT_LR2, FIT_GRAD_NORM_THR, FIT_LOSS_THR, FIT_PATIENCE
+from src.config import  FIT_MAX_STEPS,FIT_EVAL_INTERVAL, FIT_LR1, FIT_LR2, FIT_GRAD_NORM_THR, FIT_LOSS_THR, FIT_PATIENCE
 
 def initialize_params(data: dict, train_set: list) -> list:
     """
