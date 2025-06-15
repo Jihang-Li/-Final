@@ -26,18 +26,18 @@
 - MPL 拟合与预测基于 `.pkl` 格式的预处理文件，例如：
 
   ```
-  processed_data_50_after2500.pkl
+  具体地址\processed_data_50_after2500.pkl
   ```
 
   加载方式如下：
 
   ```python
   import pickle
-  with open("processed_data_50_after2500.pkl", "rb") as f:
+  with open(r"具体地址\processed_data_50_after2500.pkl", "rb") as f:
       data = pickle.load(f)
   ```
 
-- 支持 `β = γ` 和 `β ≠ γ` 两种参数版本；
+
 - 多模型参数与数据文件的交叉预测以表格 + 九宫格图像输出，图像自动保存在指定文件夹；
 - 输出包括常见指标：MSE、R²、MAE、MAPE、MaxPE、RMSE；
 - 推荐使用 `evaluate_mpl_pair_grid_style()` 或其 `beta=gamma` 特化版本。
@@ -50,19 +50,4 @@
 
 
 
-- 项目结构如下：
-
-
-  project_root/
-  ├── processed_data_50_after2500.pkl
-  ├── src/
-  │   ├── models.py
-  │   ├── utils.py
-  │   ├── config.py     
-  │   └── fitting.py
-  ├── results_crossfit/
-  │   └── grid_fit.png
-  ├── your_driver_script.py
-  └── README.md
-  ```
 
